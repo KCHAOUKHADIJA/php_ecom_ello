@@ -40,7 +40,7 @@ if(!isset($_REQUEST['id'])) {
 			unlink('../assets/uploads/'.$p_featured_photo);
 		}
 
-		// Getting other photo ID to unlink from folder
+	/* 	// Getting other photo ID to unlink from folder
 		$statement = $pdo->prepare("SELECT * FROM tbl_product_photo WHERE p_id=?");
 		$statement->execute(array($p_ids[$i]));
 		$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
@@ -48,25 +48,13 @@ if(!isset($_REQUEST['id'])) {
 			$photo = $row['photo'];
 			unlink('../assets/uploads/product_photos/'.$photo);
 		}
-
+ */
 		// Delete from tbl_photo
 		$statement = $pdo->prepare("DELETE FROM tbl_product WHERE p_id=?");
 		$statement->execute(array($p_ids[$i]));
 
 		// Delete from tbl_product_photo
 		$statement = $pdo->prepare("DELETE FROM tbl_product_photo WHERE p_id=?");
-		$statement->execute(array($p_ids[$i]));
-
-		// Delete from tbl_product_size
-		$statement = $pdo->prepare("DELETE FROM tbl_product_size WHERE p_id=?");
-		$statement->execute(array($p_ids[$i]));
-
-		// Delete from tbl_product_color
-		$statement = $pdo->prepare("DELETE FROM tbl_product_color WHERE p_id=?");
-		$statement->execute(array($p_ids[$i]));
-
-		// Delete from tbl_rating
-		$statement = $pdo->prepare("DELETE FROM tbl_rating WHERE p_id=?");
 		$statement->execute(array($p_ids[$i]));
 
 		// Delete from tbl_payment

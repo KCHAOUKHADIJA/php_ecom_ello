@@ -8,7 +8,7 @@
 					<div class="card-header">
 						<strong class="card-title" v-if="headerText">Categories</strong>
 						<div class="content-header-right float-right">
-							<a href="end-category-add.php" class="btn btn-primary btn-sm">Add New</a>
+							<a href="end-category-add.php" class="btn btn-warning btn-sm">Add New</a>
 						</div>
 					</div>
 					<div class="card-body--">
@@ -38,7 +38,8 @@
 											<td><?php echo $row['ecat_name']; ?></td>
 											<td>
 												<a href="end-category-edit.php?id=<?php echo $row['ecat_id']; ?>" class="btn btn-primary btn-sm">Edit</a>
-												<a href="#" class="btn btn-danger btn-sm" data-href="end-category-delete.php?id=<?php echo $row['ecat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+												<a href="end-category-delete.php?id=<?php echo $row['ecat_id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+
 											</td>
 										</tr>
 									<?php
@@ -62,21 +63,3 @@
 </section>
 
 
-<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
-			</div>
-			<div class="modal-body">
-				<p>Are you sure want to delete this category?</p>
-				<p style="color:red;">Be careful! All products under this category will be deleted.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				<a class="btn btn-danger btn-ok">Delete</a>
-			</div>
-		</div>
-	</div>
-</div>

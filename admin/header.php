@@ -41,6 +41,8 @@ if(!isset($_SESSION['user'])) {
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
+    
+
    <style>
     #weatherWidget .currentDesc {
         color: #ffffff!important;
@@ -83,7 +85,7 @@ if(!isset($_SESSION['user'])) {
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
     <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="../uploads/logo2.png" style="display: block;   margin-left: auto; margin-right: auto;" alt="Logo" ;"></a>
+                    <a class="navbar-brand" href="./"><img src="../assets/uploads/logo2.png" style="display: block;   margin-left: auto; margin-right: auto;" alt="Logo" ;"></a>
                 </div>
 
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -94,11 +96,11 @@ if(!isset($_SESSION['user'])) {
                     </li>
                     <li class="menu-title">Manage Store</li><!-- /.menu-title -->
                     <li class="menu-item">
-                        <a href="end-category.php"  aria-haspopup="true" aria-expanded="false"> 
+                        <a href="end-category.php" aria-expanded="false"> 
                             <i class="menu-icon fa fa-cogs"></i>Manage Categories</a>
                     </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="product.php" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    <li class="menu-item">
+                        <a href="product.php"  aria-expanded="false"> 
                             <i class="menu-icon fa fa-table"></i>Manage Products</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
